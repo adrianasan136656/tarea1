@@ -14,7 +14,16 @@
   </ion-header>
 
   <div id="container">
-    <strong>Ready to create an app?</strong>
-    <p>Start with Ionic <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">UI Components</a></p>
+    @if (ingreso() === true)
+    {
+    <ion-text color="primary">
+      <h1>Bienvenido a nuestra aplicación</h1>
+    </ion-text>
+    } 
+    @else {
+    <ion-text (click)="ingresar()">
+      <h1>Favor de iniciar sesión</h1>
+    </ion-text>
+    }
   </div>
 </ion-content>
